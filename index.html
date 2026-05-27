@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script>
+	const affitoMensile = 230;
+	const affitoAnnuale = affitoMensile * 12;
+	console.log(affitoAnnuale + " EUR");
+
+	const ilMioNome = "Gregory Antonio Vicenzo";
+console.log(ilMioNome);
+
+ function cambiaColore() {
+      document.body.style.backgroundColor = "lightblue";
+    }
+const immagini = [
+  "https://www.chieselecce.it/wp-content/uploads/2022/06/duomo01.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/8/85/Duomo_di_Lecce_Assunta.jpg",
+  "https://cdn.visitlecce.eu/storage/2023/05/31/ca09d343b2bbf5c624a816106fa66b84d6dc76c7.jpg"
+];
+
+let index = 0;
+
+function mostraSlide() {
+  document.getElementById("slide").src = immagini[index];
+}
+
+function nextSlide() {
+  index = (index + 1) % immagini.length;
+  mostraSlide();
+}
+
+function prevSlide() {
+  index = (index - 1 + immagini.length) % immagini.length;
+  mostraSlide();
+}
+
+</script>
+<style>
+@font-face{
+	font-family: "aba";
+	src: url("fonts/Vevey-HumanKind.otf"),format("opentype");
+}
+body{
+	font-size: 16px;
+	font-family: "aba",sans-serif;
+		text-align: justify;
+		line-height: 1.2;
+}
+body {
+      background-color: white;
+      transition: background-color 1s ease;
+    }
+h1,h2,h3{
+	text-transform: uppercase;
+	text-decoration:line-through ;
+	text-shadow: 10px 10px 10px yellow;
+	text-align: center;
+}
+
+ul{
+	font-style: italic;
+	font-weight: normal;
+}
+a{
+color:green;
+text-decoration:none;
+}
+/*.archivio{
+background-color:pink;
+}*/
+
+@keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .spinny-boi {
+    animation: spin 10s infinite linear;
+    display: inline-block;
+    font-size: 60px;
+  }
+@keyframes rainbow {
+    100%,
+    0% {
+      color: rgb(255, 0, 0);
+    }
+    8% {
+      color: rgb(255, 127, 0);
+    }
+    16% {
+      color: rgb(255, 255, 0);
+    }
+    25% {
+      color: rgb(127, 255, 0);
+    }
+    33% {
+      color: rgb(0, 255, 0);
+    }
+    41% {
+      color: rgb(0, 255, 127);
+    }
+    50% {
+      color: rgb(0, 255, 255);
+    }
+    58% {
+      color: rgb(0, 127, 255);
+    }
+    66% {
+      color: rgb(0, 0, 255);
+    }
+    75% {
+      color: rgb(127, 0, 255);
+    }
+    83% {
+      color: rgb(255, 0, 255);
+    }
+    91% {
+      color: rgb(255, 0, 127);
+    }
+  }
+  .rainbow-boi {
+    animation: rainbow 4s infinite linear;
+    font-size: 30px;
+  }
+  ol{
+  	display: grid;
+  	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  	text-align: center;
+  	list-style: none;
+  	height: 100px;
+  }
+  ol li{
+  	border: 1px solid black;
+  }
+  details{
+  	display: flex;
+  }
+  summary{
+  	display: block;
+cursor: pointer;
+  }
+.slideshow {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.slideshow img {
+  border-radius: 10px;
+}
+.slideshow img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+li{
+  margin: 20px;
+  padding:20px;
+}
+@media print {
+  body {
+    font-size: 48pt;
+  }
+  img{
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  body{
+    font-size: 48px;
+    background-color: pink;
+  }
+img{
+  display: none;
+}
+}
+
+
+</style>
+</head>
+<body id="aba" class="archivio">
+	<details>
+		<summary>
+			<figure>
+				<img width="300" src="https://enzomari.com/content/1-images/scan.jpeg">
+				<figcaption>Figura 1</figcaption>
+			</figure>
+		</summary>
+		<details>
+			<summary>
+		<img width="300" src="https://enzomari.com/content/1-images/scan-4-copy.jpeg">
+		</summary>
+		<img width="300" src="https://enzomari.com/content/1-images/scan-20.jpeg">
+		</details>
+	</details>
+	<marquee>ABA ABA ABA ABA ABA</marquee>
+	<div class="rainbow-boi">LECCE</div>
+<div class="spinny-boi"><img width="100" src="https://dimages2.gazzettaobjects.it/files/image_940_531/files/fp/uploads/2026/05/24/6a1370c933efa.r_d.2183-686-3133.jpeg"></div>
+
+<div class="slideshow">
+  <img id="slide" width="400" src="https://villeinsalento.com/wp-content/uploads/2025/03/piazza-del-duomo-di-lecce.jpg">
+
+  <div>
+    <button onclick="prevSlide()"><-</button>
+    <button onclick="nextSlide()">-></button>
+  </div>
+</div>
+
+  <button onclick="cambiaColore()">Click per cambia colore</button>
+
+
+<figure>
+  <img
+    src="img/elephant.jpg"
+    alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+
+
+	<ul>
+  <li>https://edu.giletti-dapra.com/aba/</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ul>
+
+<ol>
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+  <li>Item Four</li>
+  <li>Item Five</li>
+
+</ol>
+
+<label for="third-input">Il vostro cogniome</label>
+<input id="third-input" type="text" /><br/>
+<button class="archivio">Invia</button></br>
+
+<div class="container">
+	<div class="black"></div>
+	<div class="yellow"></div>
+	<div class="red"></div>
+</div>
+
+<div style="display:flex;">
+<h2 style="font-size: 4em;">HTML</h2>
+<p>HTML links are defined with the a tag:</p>
+</div>
+
+<p>hello! <a href="https://dimages2.gazzettaobjects.it/files/image_940_531/files/fp/uploads/2026/05/24/6a1370c933efa.r_d.2183-686-3133.jpeg" target="new">This is a link</a></p>
+
+</body>
+</html>
+
